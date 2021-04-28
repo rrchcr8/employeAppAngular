@@ -1,6 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {APP_BASE_HREF} from '@angular/common';
 import { AppComponent } from './app.component';
 import { EmployeeService } from './employee.service';
 
@@ -9,9 +10,12 @@ import { EmployeeService } from './employee.service';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [EmployeeService],
+  //or another way
+  //providers: [{provide: APP_BASE_HREF, useValue: ''}],
+  providers:[EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
