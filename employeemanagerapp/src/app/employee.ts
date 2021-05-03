@@ -4,7 +4,7 @@ export interface Employee {
     email: string;
     jobTitle: string;
     phone: string;
-    imageURL: string;
+    imageUrl: string;
     employeeCode: string;
    
 }
